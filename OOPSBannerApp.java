@@ -1,58 +1,25 @@
-public class OOPSstatic {
-
-    // Pattern for letter O
-    public static String[] getOPattern() {
-        return new String[] {
-            " *** ",
-            "*   *",
-            "*   *",
-            "*   *",
-            "*   *",
-            "*   *",
-            " *** "
-        };
-    }
-
-    // Pattern for letter P
-    public static String[] getPPattern() {
-        return new String[] {
-            "**** ",
-            "*   *",
-            "*   *",
-            "**** ",
-            "*    ",
-            "*    ",
-            "*    "
-        };
-    }
-
-    // Pattern for letter S
-    public static String[] getSPattern() {
-        return new String[] {
-            " ****",
-            "*    ",
-            "*    ",
-            " *** ",
-            "    *",
-            "    *",
-            "**** "
-        };
-    }
+public class stringjoin{
 
     public static void main(String[] args) {
+        renderBanner();
+    }
 
-        String[] oPattern = getOPattern();
-        String[] pPattern = getPPattern();
-        String[] sPattern = getSPattern();
+    public static void renderBanner() {
 
-        // Print OOPS (O O P S)
-        for (int i = 0; i < oPattern.length; i++) {
-            System.out.println(
-                oPattern[i] + "  " +
-                oPattern[i] + "  " +
-                pPattern[i] + "  " +
-                sPattern[i]
-            );
-        }
+        String line1 = String.join(" ", "*****",   "*****",  "****",  "*****");
+
+        String line2 = String.join(" ", "*   *",   "*   *",  "*  *",  "*    ");
+
+        String line3 = String.join(" ", "*   *",   "*   *",  "****",  "*****");
+
+        String line4 = String.join(" ", "*   *",   "*   *",  "*   ",  "    *");
+
+        String line5 = String.join(" ", "*****",   "*****",  "*   ",  "*****");
+
+        System.out.println(line1);
+        System.out.println(line2);
+        System.out.println(line3);
+        System.out.println(line4);
+        System.out.println(line5);
     }
 }
